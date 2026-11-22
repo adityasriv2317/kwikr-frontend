@@ -1,0 +1,12 @@
+.accent-loader {
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:var(--primary);
+  font-weight:850;
+}
+.accent-loader-icon { animation:accent-spin .8s linear infinite; }
+:host-context(.btn.primary) .accent-loader { min-height:24px;color:#171717; }
+@keyframes accent-spin { to { transform:rotate(360deg); } }

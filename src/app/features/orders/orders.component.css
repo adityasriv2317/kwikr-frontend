@@ -1,0 +1,79 @@
+.order-card {
+  max-width: 1180px;
+  width: calc(100% - 32px);
+  margin: 0 auto 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.order-card header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+.order-card header div {
+  display: flex;
+  flex-direction: column;
+}
+.order-card header small {
+  color: var(--muted);
+  margin-top: 3px;
+}
+.order-items {
+  padding: 12px 22px;
+}
+.order-items div {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+.shipping-address {
+  margin: 0;
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+.status {
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 11px;
+  font-weight: 900;
+  background: color-mix(in srgb, var(--muted) 14%, var(--surface));
+  color: var(--muted);
+}
+.status.pending {
+  background: rgba(232, 167, 50, 0.16);
+  color: #c28a29;
+}
+.status.paid {
+  background: rgba(52, 163, 210, 0.16);
+  color: #58b0d4;
+}
+.status.shipped {
+  background: rgba(133, 104, 218, 0.16);
+  color: #9d88db;
+}
+.status.delivered {
+  background: rgba(54, 155, 105, 0.16);
+  color: #63b78d;
+}
+.status.cancelled {
+  background: rgba(205, 75, 75, 0.16);
+  color: #dd7777;
+}
+@media (max-width: 680px) {
+  .order-card {
+    width: calc(100% - 24px);
+  }
+  .order-card header {
+    grid-template-columns: 1fr auto;
+  }
+  .order-card header strong {
+    grid-column: 1/-1;
+  }
+}
